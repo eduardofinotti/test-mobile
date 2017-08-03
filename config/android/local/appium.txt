@@ -1,0 +1,11 @@
+[caps]
+platformName = "Android"
+deviceName = "0d1633d302b3cbf0"
+app = ""
+appPackage = ""
+appActivity = ""
+appWaitActivity = ""
+newCommandTimeout = 3600
+[appium_lib]
+wait = 20
+debug = "true"
