@@ -1,1 +1,1 @@
-run: --format html --out report.html --format pretty
+run: --tag @login --format html --out report.html --format pretty

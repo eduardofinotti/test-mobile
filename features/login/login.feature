@@ -1,21 +1,27 @@
 #language: pt
-@entrar @funcionalidade_baisca
+@login @funcionalidade_baisca
 Funcionalidade: Entrar na aplicação
   Como um oficial de justiça
   Eu quero poder acessar a aplicação
 
 
-  @login_invalido @aceitacao
-  Cenário: Tentar acesar com dados inválidos
-    Dado que esteja na tela de login
-    E preencho todos os campos com dados inválidos
+  @login_invalido 
+  Cenário: Acessar aplicação com usuário inválido
+    Dado que oficial de justiça esteja na tela de login
+    E preencho o campo 'Usuário SAJ' com usuário inválido
     Quando clicar no botão 'Entrar'
     Então mostrará a mensagem 'Dados incorretos: Verifique os dados inseridos'
 
-
-  @login_valido @aceitacao
-  Cenário: Acessar aplicação
-    Dado que esteja na tela de login
-    E preencho todos os campos com dados válidos
+  @login_invalido 
+  Cenário: Acessar aplicação com senha inválida
+    Dado que oficial de justiça esteja na tela de login
+    E preencho o campo 'Senha SAJ' com senha inválida
     Quando clicar no botão 'Entrar'
-    Então mostrará a tela com inicial do aplicativo
+    Então mostrará a mensagem 'Dados incorretos: Verifique os dados inseridos'
+
+  @login_valido 
+  Cenário: Acessar aplicação com dados válidos
+    Dado que oficial de justiça esteja na tela de login
+    E informa um usuário e senha do SAJ válidos
+    Quando clicar no botão 'Entrar'
+    Então mostra a tela principal do OJO e exibi o nome do usuário logado

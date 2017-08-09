@@ -1,10 +1,20 @@
-Dado(/^que esteja na tela de login$/) do
+Dado(/^que oficial de justiça esteja na tela de login$/) do
   @login_screen_object = $ENV::LoginScreenPage.new($driver)
 end
 
-Dado(/^preencho todos os campos com dados inválidos$/) do
+Dado(/^preencho o campo 'Usuário SAJ' com usuário inválido$/) do
   @login_screen_object.send_login_user('xxx')
+  @login_screen_object.send_login_password('correct')
+end
+
+Dado(/^preencho o campo 'Senha SAJ' com senha inválida$/) do
+  @login_screen_object.send_login_user('correct')
   @login_screen_object.send_login_password('zzz')
+end
+
+Dado(/^informa um usuário e senha do SAJ válidos$/) do
+  @login_screen_object.send_login_user('correct_user')
+  @login_screen_object.send_login_password('correct_pass')
 end
 
 Quando(/^clicar no botão 'Entrar'$/) do
@@ -15,12 +25,8 @@ Então(/^mostrará a mensagem 'Dados incorretos: Verifique os dados inseridos'$/
   $driver.find_element(:id, 'id_do_field').displayed?
 end
 
-Então(/^mostrará a tela com inicial do aplicativo$/) do
+Então(/^mostra a tela principal do OJO e exibi o nome do usuário logado$/) do
   @home_screen_object = $ENV::HomeScreenPage.new($driver)
+  #validar nome do usuario logado
   @home_screen_object.checkin_button_is_displayed
-end
-
-Dado(/^preencho todos os campos com dados válidos$/) do
-  @login_screen_object.send_login_user('correct_user')
-  @login_screen_object.send_login_password('correct_pass')
 end
