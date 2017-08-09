@@ -33,7 +33,6 @@ GEM
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
     power_assert (1.0.2)
-    rake (12.0.0)
     rspec (3.6.0)
       rspec-core (~> 3.6.0)
       rspec-expectations (~> 3.6.0)
@@ -70,11 +69,10 @@ DEPENDENCIES
   cucumber
   minitest
   minitest-hooks
-  rake
   rspec
   rspec-expectations
   test-unit
   yard-cucumber
 
 BUNDLED WITH
-   1.15.1
+   1.15.3

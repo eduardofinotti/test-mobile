@@ -31,14 +31,14 @@ case platform
   when 'android'
     caps = load_appium_configuration(platform, appium)
     caps[:appium_lib][:export_session]=true
-    load_module('./features/pages/android/*.rb')
-    $ENV = "Android"
-
+    load_module('./features/page/android/*.rb')
+    $ENV = Android
+  
   when 'ios'
     caps = load_appium_configuration(platform,appium)
     caps[:appium_lib][:export_session]=true
-    load_module('./features/pages/ios/*.rb')
-    $ENV = "IOS"
+    load_module('./features/page/ios/*.rb')
+    $ENV = IOS
   else
     raise("Not supported platform #{ENV['PN']}")
 end
@@ -57,7 +57,9 @@ end
 
 #cucumber setup
 Before('@wip, @bug') do
-  pending
+  if $ENV == Android
+    pending
+  end
 end
 
 Before('@wip_android') do
