@@ -1,2 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
 report.html.html
+.idea/
+screenshots/
+Gemfile.lock
