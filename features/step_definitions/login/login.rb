@@ -19,6 +19,16 @@ end
 
 Quando(/^clicar no botão 'Entrar'$/) do
   @login_screen_object.click_login_button
+  @login_screen_object.click_login_button
+
+  sleep 2
+
+  alert = $driver.switch_to.alert
+  
+  if alert.text != nil
+     alert.accept
+  end
+
 end
 
 Então(/^mostrará a mensagem 'Dados incorretos: Verifique os dados inseridos'$/) do

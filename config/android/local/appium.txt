@@ -1,6 +1,6 @@
 [caps]
 platformName = "Android"
-deviceName = "3100a21bdb30b30d"
+deviceName = "0d1633d302b3cbf0"
 app = "app/ojo.apk"
 appPackage = "com.softplan.ojo"
 appActivity = "host.exp.exponent.LauncherActivity"

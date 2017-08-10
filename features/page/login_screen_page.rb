@@ -18,6 +18,6 @@ class LoginScreenPage
   
   def click_login_button
     @login_button.click
-  end
+  end  
  
 end
