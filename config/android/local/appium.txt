@@ -2,6 +2,9 @@
 platformName = "Android"
 deviceName = "0d1633d302b3cbf0"
 app = "app/ojo.apk"
+appPackage = "com.softplan.ojo"
+appActivity = "host.exp.exponent.LauncherActivity"
+noReset = "true"
 newCommandTimeout = 3600
 [appium_lib]
 wait = 20

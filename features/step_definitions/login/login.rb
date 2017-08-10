@@ -1,5 +1,5 @@
 Dado(/^que oficial de justiça esteja na tela de login$/) do
-  @login_screen_object = $ENV::LoginScreenPage.new($driver)
+  @login_screen_object = $ENV::LoginScreenElement.new($driver)
 end
 
 Dado(/^preencho o campo 'Usuário SAJ' com usuário inválido$/) do

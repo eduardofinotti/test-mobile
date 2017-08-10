@@ -8,12 +8,7 @@ Before do
   
   end
   $driver.wait{10}
-  if Elements.new.is_element_present("id","btLetsPlay1") == true
-    SkipOnBoarding.new.skipOnBoardingScreen
-  end
-  if Elements.new.is_element_present("id","btLoginGoogle") == true
-    Login.new.loginWithGoogle
-  end
+  
 end
 
 After do |scenario|

@@ -7,9 +7,9 @@ module Android
     def initialize(driver)
       $driver = driver
       
-      login_user = $driver.id('btnTopic')
-      login_password = $driver.id('txtTopicName')
-      login_button = $driver.id('txtTopicLevel')
+      login_user = $driver.xpath('//android.view.ViewGroup[@content-desc=\"LoginView\"]/android.view.ViewGroup[1]/android.widget.EditText')
+      login_password = $driver.xpath('//android.view.ViewGroup[@content-desc=\"LoginView\"]/android.view.ViewGroup[2]/android.widget.EditText')
+      login_button = $driver.xpath('//android.view.ViewGroup[@content-desc=\"LoginView\"]/android.view.ViewGroup[3]/android.view.ViewGroup')
       
       super(login_user, login_password, login_button)
     end
