@@ -5,10 +5,7 @@ Before do
     $driver.start_driver
     $action = Actions.new()
     p "Driver starting"
-  
   end
-  $driver.wait{10}
-  
 end
 
 After do |scenario|
