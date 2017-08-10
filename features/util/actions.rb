@@ -4,6 +4,10 @@ class Actions
     $driver.find_element(id: id).click
   end
 
+  def clickOnElementByIndex(id,index)
+    $driver.find_elements(:id, id)[index].click
+  end
+
   def waitAndClickOnButton(id)
     $driver.wait { $driver.find_element(id: id).click}
   end
