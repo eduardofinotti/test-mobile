@@ -4,6 +4,7 @@ Before do
   else
     $driver.start_driver
     $action = Actions.new()
+    $action.android_start_activity
     p "Driver starting"
   end
 end
