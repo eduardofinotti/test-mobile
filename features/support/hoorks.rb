@@ -1,4 +1,5 @@
 Before do
+  
   if $driver.nil?
     p "Driver is running"
   else
@@ -7,6 +8,7 @@ Before do
     $action.android_location_on
     p "Driver starting"
   end
+
 end
 
 After do |scenario|

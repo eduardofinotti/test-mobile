@@ -41,22 +41,8 @@ class Actions
   end
 
   def android_location_on
-    # $driver.start_activity app_package: "com.android.settings", app_activity: "Settings"
-    # $driver.scroll_to("Google").click
-    # $driver.scroll_to("Location").click
-    
-    # location = $driver.find_element(id: "com.android.settings:id/switch_widget")
-
-    # p "---------------"
-    # p location.text
-    # p "---------------"
-
-    # if(location.text == "ON")
-    #   location.click
-    # end
-
     system("adb shell settings put secure location_providers_allowed +network")
     system("adb shell settings put secure location_providers_allowed +gps")
-
   end  
+
 end

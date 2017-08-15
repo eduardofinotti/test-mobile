@@ -16,6 +16,7 @@ Então(/^deve ser exibida uma mensagem pedindo para o usuário habilitar o GPS a
   if @gps_desativado_screen_object.getMensagemGSPDesativado != "Por favor, ative o gps e tente novamente."
     fail("Erro: Mensagem de GPS Desativado não está na tela.")
   end 
+  
 end
 
 Dado(/^que o usuário logado tenha recusado a autorizaçao de acesso a localizacao no login$/) do

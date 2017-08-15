@@ -15,5 +15,6 @@ module Android
     def error_message
       $driver.id('login_error')
     end
+    
   end
 end

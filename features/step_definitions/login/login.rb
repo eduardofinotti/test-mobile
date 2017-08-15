@@ -14,18 +14,19 @@ Dado(/^preencho o campo 'Senha SAJ' com senha inválida$/) do
 end
 
 Dado(/^informa um usuário e senha do SAJ válidos$/) do
-    LoginActions.new.preencheCamposLogin(@login_screen_object)
+  LoginActions.new.preencheCamposLogin(@login_screen_object)
 end
 
 Quando(/^clicar no botão 'Entrar'$/) do
-    LoginActions.new.entrarPermitindoLocalizacao(@login_screen_object)
+  LoginActions.new.entrarPermitindoLocalizacao(@login_screen_object)
 end
 
 Então(/^mostrará a mensagem "([^"]*)"$/) do |mensagem|
+  
   if mensagem != "Dados incorretos: Verifique os dados inseridos"
     fail("Erro de validaçao")
-    #$driver.find_element(:id, 'id_do_field').displayed?
   end
+  
 end
 
 Então(/^mostra a tela principal do OJO e exibi o nome do usuário logado$/) do
