@@ -9,12 +9,11 @@ Funcionalidade: Encontrar localização
     Quando realizar o login na aplicação
     Então deve ser exibida uma mensagem pedindo para o usuário habilitar o GPS antes de prosseguir
   
+  @semgps
   Cenário: Acessar aplicação sem permissão de acesso á localização
-    Dado que o usuário logado tenha recusado a autorizaçao de acesso a localizacao no login 
-    Quando acessar a tela principal
+    Dado que o usuário logado tenha recusado a autorizaçao de acesso a localizacao no login
     Então deve ser apresentada uma tela pedindo autorização de acesso à localização do usuário
   
-  @semgps
   Cenário: Oficial de justiça realiza localização para enviar
     Dado GPS do dispositivo móvel está habilitado 
     E o OJO possui permissão de acesso à localização do dispositivo móvel
