@@ -14,9 +14,5 @@ class HomeScreenPage
   def clickEstouAqui
     @button_estou_aqui.click
   end  
-
-  def getMensagemGSPDesativado
-    @mensagem_gps_desativado.text
-  end  
  
 end

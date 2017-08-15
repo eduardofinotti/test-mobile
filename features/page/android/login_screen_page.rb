@@ -7,9 +7,9 @@ module Android
     def initialize(driver)
       @driver = driver
       
-      login_user = @driver.xpath("//android.view.ViewGroup[@content-desc=\"LoginView\"]/android.view.ViewGroup[1]/android.widget.EditText")
-      login_password = @driver.xpath("//android.view.ViewGroup[@content-desc=\"LoginView\"]/android.view.ViewGroup[2]/android.widget.EditText")
-      login_button = @driver.xpath("//android.view.ViewGroup[@content-desc=\"LoginView\"]/android.view.ViewGroup[3]")
+      login_user = @driver.xpath("//android.view.ViewGroup[@content-desc=\"Usuário SAJ\"]/android.view.ViewGroup/android.widget.EditText")
+      login_password = @driver.xpath("//android.view.ViewGroup[@content-desc=\"Senha SAJ\"]/android.view.ViewGroup/android.widget.EditText")
+      login_button = @driver.xpath("//android.view.ViewGroup[@content-desc=\"LoginView\"]/android.view.ViewGroup[3]/android.view.ViewGroup")
       
       super(login_user, login_password, login_button)
     end

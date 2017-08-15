@@ -19,16 +19,20 @@ Então(/^deve ser exibida uma mensagem pedindo para o usuário habilitar o GPS a
   
 end
 
-Dado(/^que o usuário logado tenha recusado a autorizaçao de acesso a localizacao no login$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Quando(/^acessar a tela principal$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+Dado(/^que o usuário logado tenha recusado a autorização de acesso a localização no login$/) do
+  @login_screen_object = $ENV::LoginScreenElement.new($driver) 
+  LoginActions.new.verificaSeTelaLogin
+  LoginActions.new.preencheCamposLogin(@login_screen_object)
+  LoginActions.new.entrarNaoPermitindoLocalizacao(@login_screen_object)
 end
 
 Então(/^deve ser apresentada uma tela pedindo autorização de acesso à localização do usuário$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sem_permissao_gps_screen_object = $ENV::SemPermissaoGPSScreenElement.new($driver)
+
+  if @sem_permissao_gps_screen_object.getMensagemSemPermissaoGPS != "Por favor, de permissão para posseguir."
+    fail("Erro: Mensagem de Sem Permissao de Localizacao não está na tela.")
+  end
+
 end
 
 Dado(/^GPS do dispositivo móvel está habilitado$/) do
@@ -44,5 +48,13 @@ Quando(/^o oficial de justiça pressionar o botão Estou aqui$/) do
 end
 
 Então(/^deve ser apresentada a tela com o endereço onde ele se encontra e o botão Enviar localização habilitado$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Então(/^deve ser apresentada a tela com o endereço onde Oficial de justiça se encontra$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Então(/^deve apresentar o botão Enviar localização habilitado$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
