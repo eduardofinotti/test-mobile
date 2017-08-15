@@ -6,7 +6,7 @@ class SemPermissaoGPSScreenPage
     @mensagem_sem_permissao_gps = mensagem_sem_permissao_gps
   end
 
-  def getMensageSemPermissaoLocalizacao
+  def getMensagemSemPermissaoGPS
     @mensagem_sem_permissao_gps.text 
   end  
  
