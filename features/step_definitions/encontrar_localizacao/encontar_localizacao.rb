@@ -27,9 +27,9 @@ Dado(/^que o usuário logado tenha recusado a autorização de acesso a localiza
 end
 
 Então(/^deve ser apresentada uma tela pedindo autorização de acesso à localização do usuário$/) do
-  @sem_permissao_screen_object = $ENV::SemPermissaoScreenElement.new($driver)
+  @sem_permissao_gps_screen_object = $ENV::SemPermissaoGPSScreenElement.new($driver)
 
-  if @sem_permissao_screen_object.getMensageSemPermissaoLocalizacao != "Por favor, de permissão para posseguir."
+  if @sem_permissao_gps_screen_object.getMensageSemPermissaoLocalizacao != "Por favor, de permissão para posseguir."
     fail("Erro: Mensagem de Sem Permissao de Localizacao não está na tela.")
   end
 
