@@ -19,7 +19,7 @@ Então(/^deve ser exibida uma mensagem pedindo para o usuário habilitar o GPS a
   
 end
 
-Dado(/^que o usuário logado tenha recusado a autorizaçao de acesso a localizacao no login$/) do
+Dado(/^que o usuário logado tenha recusado a autorização de acesso a localização no login$/) do
   @login_screen_object = $ENV::LoginScreenElement.new($driver) 
   LoginActions.new.verificaSeTelaLogin
   LoginActions.new.preencheCamposLogin(@login_screen_object)
@@ -27,11 +27,12 @@ Dado(/^que o usuário logado tenha recusado a autorizaçao de acesso a localizac
 end
 
 Então(/^deve ser apresentada uma tela pedindo autorização de acesso à localização do usuário$/) do
-  @sem_permissao_localizacao_screen_object = $ENV::SemPermissaoLocalizacaoScreenElement.new($driver)
+  @sem_permissao_screen_object = $ENV::SemPermissaoScreenElement.new($driver)
 
-  if @sem_permissao_localizacao_screen_object.getMensageSemPermissaoLocalizacao != "Por favor, de permissão para posseguir."
+  if @sem_permissao_screen_object.getMensageSemPermissaoLocalizacao != "Por favor, de permissão para posseguir."
     fail("Erro: Mensagem de Sem Permissao de Localizacao não está na tela.")
-  end 
+  end
+
 end
 
 Dado(/^GPS do dispositivo móvel está habilitado$/) do

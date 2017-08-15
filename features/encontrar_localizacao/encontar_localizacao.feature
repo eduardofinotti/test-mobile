@@ -11,7 +11,7 @@ Funcionalidade: Encontrar localização
   
   @semgps
   Cenário: Acessar aplicação sem permissão de acesso á localização
-    Dado que o usuário logado tenha recusado a autorizaçao de acesso a localizacao no login
+    Dado que o usuário logado tenha recusado a autorização de acesso a localização no login
     Então deve ser apresentada uma tela pedindo autorização de acesso à localização do usuário
   
   Cenário: Oficial de justiça realiza localização para enviar
