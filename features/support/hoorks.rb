@@ -1,11 +1,14 @@
 Before do
+  
   if $driver.nil?
     p "Driver is running"
   else
     $driver.start_driver
     $action = Actions.new()
+    $action.android_location_on
     p "Driver starting"
   end
+
 end
 
 After do |scenario|

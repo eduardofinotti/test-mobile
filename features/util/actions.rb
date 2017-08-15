@@ -16,6 +16,14 @@ class Actions
     $driver.wait { $driver.find_element(id: id)}
   end
 
+  def waitElementByXpath(xpath)
+    $driver.wait { $driver.find_element(xpath: xpath)}
+  end
+
+  def waitElementAndClick(id)
+    $driver.wait { $driver.find_element(id: id).click}
+  end
+
   def sendKey(id,text)
    $driver.find_element(id: id).send_key(text)
   end
@@ -31,4 +39,10 @@ class Actions
   def keyEvent(element)
     $driver.press_keycode(element)
   end
+
+  def android_location_on
+    system("adb shell settings put secure location_providers_allowed +network")
+    system("adb shell settings put secure location_providers_allowed +gps")
+  end  
+
 end

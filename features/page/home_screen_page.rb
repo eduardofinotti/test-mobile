@@ -1,13 +1,22 @@
 class HomeScreenPage
   
-  attr_accessor :checkin_button
+  attr_accessor :user_name, :button_estou_aqui
   
-  def initialize(checkin_button)
-    @checkin_button = checkin_button
+  def initialize(user_name, button_estou_aqui)
+    @label_user_name = user_name
+    @button_estou_aqui = button_estou_aqui
   end
 
-  def checkin_button_is_displayed
-    @checkin_button.displayed?
+  def getUserName
+    @label_user_name.text
   end
+
+  def clickEstouAqui
+    @button_estou_aqui.click
+  end  
+
+  def getMensagemGSPDesativado
+    @mensagem_gps_desativado.text
+  end  
  
 end
