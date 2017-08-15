@@ -6,6 +6,7 @@ Quando(/^realizar o login na aplicação$/) do
 end
 
 Dado(/^que o GPS do dispositivo está desabilitado$/) do
+  system("adb shell settings put secure location_providers_allowed -network")
   system("adb shell settings put secure location_providers_allowed -gps")
 end
 
