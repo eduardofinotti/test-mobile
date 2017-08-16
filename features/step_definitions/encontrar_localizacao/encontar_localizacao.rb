@@ -36,25 +36,41 @@ Então(/^deve ser apresentada uma tela pedindo autorização de acesso à locali
 end
 
 Dado(/^GPS do dispositivo móvel está habilitado$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  system("adb shell settings put secure location_providers_allowed +network")
+  system("adb shell settings put secure location_providers_allowed +gps")
 end
 
-Dado(/^o OJO possui permissão de acesso à localização do dispositivo móvel$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+Quando(/^realizar o login na aplicação permitindo acesso à localização do dispositivo móvel$/) do
+  @login_screen_object = $ENV::LoginScreenElement.new($driver) 
+  LoginActions.new.verificaSeTelaLogin
+  #LoginActions.new.preencheCamposLogin(@login_screen_object)
+  LoginActions.new.entrarPermitindoLocalizacao(@login_screen_object)
+end
+
+Quando(/^navegar ate a aba de Localização$/) do
+  Appium::TouchAction
+  .new
+  .press({x: 684, y: 570})
+  .move_to({x: -560, y: -11})
+  .release
+  .perform
 end
 
 Quando(/^o oficial de justiça pressionar o botão Estou aqui$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Então(/^deve ser apresentada a tela com o endereço onde ele se encontra e o botão Enviar localização habilitado$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @home_screen_object = $ENV::HomeScreenElement.new($driver)
+  @home_screen_object.clickEstouAqui
 end
 
 Então(/^deve ser apresentada a tela com o endereço onde Oficial de justiça se encontra$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @confirmar_local_screen_page = $ENV::ConfirmarLocalScreenElement.new($driver)
+  endenreco = @confirmar_local_screen_page.getEndereco
+
+  if endereço == entrarNaoPermitindoLocalizacao 
+    fail("Erro: Nao pegou o endereço")
+  end
+    
 end
 
 Então(/^deve apresentar o botão Enviar localização habilitado$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @confirmar_local_screen_page.botaoEnviarLocalHabilitado
 end
