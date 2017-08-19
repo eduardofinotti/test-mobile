@@ -16,6 +16,6 @@ module Android
       $driver.id('login_error')
     end
     
-  end
+  end 
 
 end
