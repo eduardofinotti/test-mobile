@@ -1,7 +1,7 @@
 require './features/page/localizacao_screen_page'
 module Android
 
-# PO da pagina de buscar localização do oficial de justiça
+# PO da página de buscar localização do oficial de justiça
   class LocalizacaoScreenElement < LocalizacaoScreenPage
     
     attr_reader :driver

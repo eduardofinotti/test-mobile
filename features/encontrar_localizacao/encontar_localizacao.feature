@@ -3,7 +3,7 @@
 Funcionalidade: Encontrar localização
   Como oficial de justiça, 
   Eu quero identificar minha localização para poder verificá-la antes que seja informada à central de mandados
-  0
+  
   Cenário: Acessar aplicação com GPS desativado
     Dado que o GPS do dispositivo está desabilitado
     Quando realizar o login na aplicação

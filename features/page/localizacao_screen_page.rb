@@ -1,4 +1,4 @@
-# Spetas da pagina de encontrar localização do oficial de justiça
+# Passos da página de encontrar localização do oficial de justiça
 class LocalizacaoScreenPage
   
   attr_accessor :button_estou_aqui
