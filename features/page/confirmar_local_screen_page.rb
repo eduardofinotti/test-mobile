@@ -1,3 +1,4 @@
+# steps da pagina de confiamr endereço do oficial de justiça
 class ConfirmarLocalScreenPage
   
   attr_accessor :login_user, :login_password, :login_button

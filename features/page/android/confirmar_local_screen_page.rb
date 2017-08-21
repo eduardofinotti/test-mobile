@@ -1,5 +1,7 @@
 require './features/page/confirmar_local_screen_page'
 module Android
+
+# PO da pagina de confimar localizaco do oficial de justiça  
   class ConfirmarLocalScreenElement < ConfirmarLocalScreenPage
     
     attr_reader :driver
