@@ -18,6 +18,7 @@ Dado(/^informa um usuário e senha do SAJ válidos$/) do
 end
 
 Quando(/^clicar no botão 'Entrar'$/) do
+  @login_screen_object.click_login_button
   LoginActions.new.entrarPermitindoLocalizacao(@login_screen_object)
 end
 
@@ -30,9 +31,9 @@ Então(/^mostrará a mensagem "([^"]*)"$/) do |mensagem|
 end
 
 Então(/^mostra a tela principal do OJO e exibi o nome do usuário logado$/) do
-  @home_screen_object = $ENV::HomeScreenElement.new($driver)
+  @header_screen_object = $ENV::HeaderScreenElement.new($driver)
   
-  if @home_screen_object.getUserName != "João Carlos 2"
+  if @header_screen_object.getUserName != "João Carlos 2"
     fail("Erro de validaçao")
   end 
    

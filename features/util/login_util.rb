@@ -10,15 +10,19 @@ class LoginActions
   end  
 
   def entrarPermitindoLocalizacao(login_screen_object)
-    login_screen_object.click_login_button
+    #login_screen_object.click_login_button
     login_screen_object.click_login_button
     $action.waitElementAndClick("com.android.packageinstaller:id/permission_allow_button")
   end 
 
    def entrarNaoPermitindoLocalizacao(login_screen_object)
-    login_screen_object.click_login_button
+    #login_screen_object.click_login_button
     login_screen_object.click_login_button
     $action.waitElementAndClick("com.android.packageinstaller:id/permission_deny_button")
   end 
+
+  def clickBotaoEntrar(login_screen_object)
+    login_screen_object.click_login_button    
+  end
 
 end
