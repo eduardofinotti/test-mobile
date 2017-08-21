@@ -18,7 +18,6 @@ Dado(/^informa um usuário e senha do SAJ válidos$/) do
 end
 
 Quando(/^clicar no botão 'Entrar'$/) do
-  @login_screen_object.click_login_button
   LoginActions.new.entrarPermitindoLocalizacao(@login_screen_object)
 end
 
