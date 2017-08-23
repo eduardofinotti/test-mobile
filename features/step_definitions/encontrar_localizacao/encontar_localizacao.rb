@@ -56,10 +56,9 @@ Quando(/^realizar o login na aplicação permitindo acesso à localização do d
   LoginActions.new.verificaSeTelaLogin
   #LoginActions.new.preencheCamposLogin(@login_screen_object)
   LoginActions.new.entrarPermitindoLocalizacao(@login_screen_object)
-
 end
 
-Quando(/^navegar ate a aba de Localização$/) do
+Quando(/^navegar até a aba de Localização$/) do
   $action.waitElement("NameLabel")
 
   Appium::TouchAction
@@ -78,14 +77,17 @@ end
 
 Então(/^deve ser apresentada a tela com o endereço onde Oficial de justiça se encontra$/) do
   @confirmar_local_screen_page = $ENV::ConfirmarLocalScreenElement.new($driver)
-  endenreco = @confirmar_local_screen_page.getEndereco
 
-  if endereço == entrarNaoPermitindoLocalizacao 
-    fail("Erro: Nao pegou o endereço")
+  if @confirmar_local_screen_page.getEndereco == nil 
+    fail("Erro! Não pegou o endereço")
   end
     
 end
 
 Então(/^deve apresentar o botão Enviar localização habilitado$/) do
-  @confirmar_local_screen_page.botaoEnviarLocalHabilitado
+  
+  if !@confirmar_local_screen_page.botaoEnviarLocalHabilitado 
+    fail("ERRO! O botão não está habilitado!")
+  end
+
 end

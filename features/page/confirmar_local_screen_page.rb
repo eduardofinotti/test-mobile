@@ -1,7 +1,7 @@
 # passos da página de confirmar endereço do oficial de justiça
 class ConfirmarLocalScreenPage
   
-  attr_accessor :login_user, :login_password, :login_button
+  attr_accessor :endereco, :botao_enviar_local
   
   def initialize(endereco, botao_enviar_local)
     @endereco = endereco
@@ -13,7 +13,11 @@ class ConfirmarLocalScreenPage
   end  
   
   def botaoEnviarLocalHabilitado
-    @login_button.isEnabled?
+    @botao_enviar_local.enabled?
   end  
- 
+
+  def click_enviar_localizacao
+    @botao_enviar_local.click
+  end
+
 end

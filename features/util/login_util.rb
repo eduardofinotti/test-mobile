@@ -5,8 +5,8 @@ class LoginActions
   end
 
   def preencheCamposLogin(login_screen_object)
-    login_screen_object.send_login_user('correct_user')
-    login_screen_object.send_login_password('correct_pass')
+    login_screen_object.send_login_user('oficial')
+    login_screen_object.send_login_password('132')
   end  
 
   def entrarPermitindoLocalizacao(login_screen_object)
