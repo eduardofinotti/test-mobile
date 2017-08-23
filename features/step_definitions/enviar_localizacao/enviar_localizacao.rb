@@ -53,7 +53,7 @@ Então(/^deve ser enviada sua localização para o servidor \(backend\) do OJO e
 end
 
 Quando(/^o oficial de justiça pressionar o botão 'Enviar localização' sem conexão com a internet$/) do
-  
+
   # Aguarda tela carregar e vai para a aba Localização
   $action.waitElement("NameLabel")
   Appium::TouchAction.new.press({x: 684, y: 570}).move_to({x: -560, y: -11}).release.perform
@@ -71,14 +71,24 @@ Quando(/^o oficial de justiça pressionar o botão 'Enviar localização' sem co
 
   status = $action.get_conection_status
 
-  # if (status) != 0
-  #   $action.android_wifi_off
-  # end
+  if (status) != 0
+    $action.android_wifi_off
+  end
 
+  @confirmar_local_screen_page = $ENV::ConfirmarLocalScreenElement.new($driver)
   @confirmar_local_screen_page.click_enviar_localizacao
 
 end
 
 Então(/^deve ser exibida uma mensagem informando que não há conexão com a internet e que não foi possível enviar a localização$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  # Verifica se mensagem de sucesso
+  $action.waitElement("ConfirmLocationBtn")
+  @localizacao_enviada_screen_page = $ENV::LocalizacaoEnviadaScreenElement.new($driver)
+
+  if @localizacao_enviada_screen_page.get_mensagem != "Não foi possível enviar a sua localização. Caso\n esteja em um local fechado, tente novamente\n quando estiver em local aberto." 
+    fail("Erro! O teste falhou!")
+  end 
+
+  $action.android_wifi_on
+  
 end

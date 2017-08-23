@@ -11,6 +11,7 @@ Funcionalidade: Enviar localização para o OJO-Web
     Quando o oficial de justiça pressionar o botão 'Enviar localização'
     Então deve ser enviada sua localização para o servidor (backend) do OJO e exibir uma mensagem de sucesso
   
+  @atual
   Cenário: Enviar localização para o servidor sem conexão com a internet
     Dado que o oficial de justiça esteja logado no OJO com permissao a Localização 
     E que o dispositivo móvel esteja com o GPS ativo
