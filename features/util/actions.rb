@@ -45,14 +45,6 @@ class Actions
     system("adb shell settings put secure location_providers_allowed +gps")
   end  
 
-  def android_wifi_on
-    $driver.set_network_connection(6)
-  end
-  
-  def android_wifi_off
-    $driver.set_network_connection(0)
-  end   
-
   def get_conection_status
     $driver.get_network_connection
   end

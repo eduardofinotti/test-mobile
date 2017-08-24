@@ -6,10 +6,8 @@ Dado(/^que o oficial de justiça esteja logado no OJO com permissao a Localizaç
 end
 
 Dado(/^que o dispositivo móvel tem conexão com a internet$/) do
-  
-  status = $action.get_conection_status
 
-  if (status) != 6
+  if ($driver.get_network_connection) != 6
     fail("Erro! o dispositivo não está conectado a internet!")
   end
 
@@ -41,7 +39,7 @@ Quando(/^o oficial de justiça pressionar o botão 'Enviar localização'$/) do
 
 end
 
-Então(/^deve ser enviada sua localização para o servidor \(backend\) do OJO e exibir uma mensagem de sucesso$/) do
+Então(/^deve ser enviada sua localização para o servidor \(backend\) do OJO exibindo uma mensagem de sucesso$/) do
   # Verifica se mensagem de sucesso
   $action.waitElement("ConfirmLocationBtn")
   @local_enviado_screen_page = $ENV::LocalizacaoEnviadaScreenElement.new($driver)
@@ -69,10 +67,8 @@ Quando(/^o oficial de justiça pressionar o botão 'Enviar localização' sem co
     fail("Erro! Não pegou o endereço")
   end
 
-  status = $action.get_conection_status
-
-  if (status) != 0
-    $action.android_wifi_off
+  if ($driver.get_network_connection) != 0
+    $driver.set_network_connection(o)
   end
 
   @confirmar_local_screen_page = $ENV::ConfirmarLocalScreenElement.new($driver)
@@ -80,7 +76,7 @@ Quando(/^o oficial de justiça pressionar o botão 'Enviar localização' sem co
 
 end
 
-Então(/^deve ser exibida uma mensagem informando que não há conexão com a internet e que não foi possível enviar a localização$/) do
+Então(/^deve ser exibida uma mensagem informando que não há conexão com a internet$/) do
   # Verifica se mensagem de sucesso
   $action.waitElement("ConfirmLocationBtn")
   @local_enviado_screen_page = $ENV::LocalizacaoEnviadaScreenElement.new($driver)
@@ -89,6 +85,6 @@ Então(/^deve ser exibida uma mensagem informando que não há conexão com a in
     fail("Erro! O teste falhou!")
   end 
 
-  $action.android_wifi_on
+  $driver.set_network_connection(6)
   
 end
