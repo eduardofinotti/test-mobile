@@ -68,7 +68,7 @@ Quando(/^o oficial de justiça pressionar o botão 'Enviar localização' sem co
   end
 
   if ($driver.get_network_connection) != 0
-    $driver.set_network_connection(o)
+    $driver.set_network_connection(0)
   end
 
   @confirmar_local_screen_page = $ENV::ConfirmarLocalScreenElement.new($driver)
