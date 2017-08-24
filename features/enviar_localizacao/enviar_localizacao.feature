@@ -1,5 +1,5 @@
 #language: pt
-@localizacao @funcionalidade_basica @enviar
+@enviar_localizacao @funcionalidade_basica @enviar
 Funcionalidade: Enviar localização para o OJO-Web
   Como oficial de justiça,
   Eu quero enviar minha localização no SAJ/OJO Mobile para o OJO-Web para poder comprovar que estive no endereço onde a diligência foi cumprida.

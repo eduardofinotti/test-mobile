@@ -1,4 +1,4 @@
-Dado(/^que oficial de justiça esteja na tela de login$/) do
+Dado(/^que o oficial de justiça esteja na tela de login$/) do
   @login_screen_object = $ENV::LoginScreenElement.new($driver) 
   LoginActions.new.verificaSeTelaLogin
 end
@@ -28,7 +28,6 @@ end
 Então(/^mostrará a mensagem "([^"]*)"$/) do |mensagem|
   
   @login_errado = $ENV::NotificacaoScreenElement.new($driver)
-  
   @mensagem = @login_errado.getMensagem
 
   if @mensagem != mensagem
@@ -37,13 +36,13 @@ Então(/^mostrará a mensagem "([^"]*)"$/) do |mensagem|
   
 end
 
-Então(/^mostra a tela principal do OJO e exibi o nome do usuário logado$/) do
+Então(/^mostra a tela principal do OJO e exibi o nome do usuário logado "([^"]*)"$/) do |nome|
   @header_screen_object = $ENV::HeaderScreenElement.new($driver)
   
-  if @header_screen_object.getUserName != "Oficial O"
+  if @header_screen_object.getUserName != nome
     fail("Erro de validaçao")
   end 
-   
+
 end
 
 Quando(/^clicar no botão 'Entrar' sem preencher os dados de login$/) do

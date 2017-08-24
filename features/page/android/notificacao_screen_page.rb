@@ -18,6 +18,3 @@ module Android
     
   end
 end
-
-# GpsDesativadoScreenElement
-# GpsDesativadoScreenPage

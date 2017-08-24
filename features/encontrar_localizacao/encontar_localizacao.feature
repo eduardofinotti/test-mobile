@@ -7,7 +7,7 @@ Funcionalidade: Encontrar localização
   Cenário: Acessar aplicação com GPS desativado
     Dado que o GPS do dispositivo está desabilitado
     Quando realizar o login na aplicação
-    Então deve ser exibida uma mensagem pedindo para o usuário habilitar o GPS antes de prosseguir
+    Então deve ser exibida a mensagem "Por favor, ative o gps e tente novamente."
   
   Cenário: Verificar alerta pedindo permissao de acesso a localização
     Dado que o usuário realizou o login na aplicação
@@ -15,7 +15,7 @@ Funcionalidade: Encontrar localização
 
   Cenário: Acessar aplicação sem permissão de acesso á localização
     Dado que o usuário logado tenha recusado a autorização de acesso a localização no login
-    Então deve ser apresentada uma tela pedindo autorização de acesso à localização do usuário
+    Então deve ser apresentada uma tela com a mensagem "Por favor, de permissão para posseguir." 
   
   Cenário: Oficial de justiça realiza localização para enviar
     Dado GPS do dispositivo móvel está habilitado 
