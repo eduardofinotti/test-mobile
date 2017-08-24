@@ -1,14 +1,14 @@
 Quando(/^realizar o login na aplicação$/) do
   @login_screen_object = $ENV::LoginScreenElement.new($driver) 
   LoginActions.new.verificaSeTelaLogin
-  #LoginActions.new.preencheCamposLogin(@login_screen_object)
+  LoginActions.new.preencheCamposLogin(@login_screen_object)
   LoginActions.new.entrarPermitindoLocalizacao(@login_screen_object)
 end
 
 Dado(/^que o usuário realizou o login na aplicação$/) do
   @login_screen_object = $ENV::LoginScreenElement.new($driver) 
   LoginActions.new.verificaSeTelaLogin
-  #LoginActions.new.preencheCamposLogin(@login_screen_object)
+  LoginActions.new.preencheCamposLogin(@login_screen_object)
   LoginActions.new.clickBotaoEntrar(@login_screen_object)
 end
 
@@ -21,26 +21,26 @@ Dado(/^que o GPS do dispositivo está desabilitado$/) do
   system("adb shell settings put secure location_providers_allowed -gps")
 end
 
-Então(/^deve ser exibida uma mensagem pedindo para o usuário habilitar o GPS antes de prosseguir$/) do
-  @gps_desativado_screen_object = $ENV::GpsDesativadoScreenElement.new($driver)
-
-  if @gps_desativado_screen_object.getMensagemGSPDesativado != "Por favor, ative o gps e tente novamente."
+Então(/^deve ser exibida a mensagem "([^"]*)"$/) do |mensagem|
+  @gps_desativado_screen_object = $ENV::NotificacaoScreenElement.new($driver)
+  
+  if @gps_desativado_screen_object.getMensagem != mensagem
     fail("Erro: Mensagem de GPS Desativado não está na tela.")
   end 
-  
+
 end
 
 Dado(/^que o usuário logado tenha recusado a autorização de acesso a localização no login$/) do
   @login_screen_object = $ENV::LoginScreenElement.new($driver) 
   LoginActions.new.verificaSeTelaLogin
-  #LoginActions.new.preencheCamposLogin(@login_screen_object)
+  LoginActions.new.preencheCamposLogin(@login_screen_object)
   LoginActions.new.entrarNaoPermitindoLocalizacao(@login_screen_object)
 end
 
-Então(/^deve ser apresentada uma tela pedindo autorização de acesso à localização do usuário$/) do
-  @sem_permissao_gps_screen_object = $ENV::SemPermissaoGPSScreenElement.new($driver)
-
-  if @sem_permissao_gps_screen_object.getMensagemSemPermissaoGPS != "Por favor, de permissão para posseguir."
+Então(/^deve ser apresentada uma tela com a mensagem "([^"]*)"$/) do |mensagem|
+  @sem_permissao_gps_screen_object = $ENV::NotificacaoScreenElement.new($driver)
+  
+  if @sem_permissao_gps_screen_object.getMensagem != mensagem
     fail("Erro: Mensagem de Sem Permissao de Localizacao não está na tela.")
   end
 
@@ -50,11 +50,11 @@ Dado(/^GPS do dispositivo móvel está habilitado$/) do
   system("adb shell settings put secure location_providers_allowed +network")
   system("adb shell settings put secure location_providers_allowed +gps")
 end
-
+ 
 Quando(/^realizar o login na aplicação permitindo acesso à localização do dispositivo móvel$/) do
   @login_screen_object = $ENV::LoginScreenElement.new($driver) 
   LoginActions.new.verificaSeTelaLogin
-  #LoginActions.new.preencheCamposLogin(@login_screen_object)
+  LoginActions.new.preencheCamposLogin(@login_screen_object)
   LoginActions.new.entrarPermitindoLocalizacao(@login_screen_object)
 end
 

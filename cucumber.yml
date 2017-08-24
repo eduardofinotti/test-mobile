@@ -1,1 +1,1 @@
-run: --tag @atual --format html --out report.html --format pretty
+run: --tag @localizacao --format html --out report.html --format pretty
