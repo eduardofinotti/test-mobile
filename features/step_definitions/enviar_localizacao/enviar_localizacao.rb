@@ -44,9 +44,9 @@ end
 Então(/^deve ser enviada sua localização para o servidor \(backend\) do OJO e exibir uma mensagem de sucesso$/) do
   # Verifica se mensagem de sucesso
   $action.waitElement("ConfirmLocationBtn")
-  @localizacao_enviada_screen_page = $ENV::LocalizacaoEnviadaScreenElement.new($driver)
+  @local_enviado_screen_page = $ENV::LocalizacaoEnviadaScreenElement.new($driver)
 
-  if @localizacao_enviada_screen_page.get_mensagem != "A sua localização\n foi enviada." 
+  if @local_enviado_screen_page.get_mensagem != "A sua localização\n foi enviada." 
     fail("Erro! A localização não foi enviada com sucesso!")
   end 
   
@@ -83,9 +83,9 @@ end
 Então(/^deve ser exibida uma mensagem informando que não há conexão com a internet e que não foi possível enviar a localização$/) do
   # Verifica se mensagem de sucesso
   $action.waitElement("ConfirmLocationBtn")
-  @localizacao_enviada_screen_page = $ENV::LocalizacaoEnviadaScreenElement.new($driver)
+  @local_enviado_screen_page = $ENV::LocalizacaoEnviadaScreenElement.new($driver)
 
-  if @localizacao_enviada_screen_page.get_mensagem != "Não foi possível enviar a sua localização. Caso\n esteja em um local fechado, tente novamente\n quando estiver em local aberto." 
+  if @local_enviado_screen_page.get_mensagem != "Não foi possível enviar a sua localização. Caso\n esteja em um local fechado, tente novamente\n quando estiver em local aberto." 
     fail("Erro! O teste falhou!")
   end 
 
