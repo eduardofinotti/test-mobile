@@ -20,7 +20,6 @@ Funcionalidade: Encontrar localização
   Cenário: Oficial de justiça realiza localização para enviar
     Dado GPS do dispositivo móvel está habilitado 
     Quando realizar o login na aplicação permitindo acesso à localização do dispositivo móvel
-    E navegar até a aba de Localização
     E o oficial de justiça pressionar o botão Estou aqui
     Então deve ser apresentada a tela com o endereço onde Oficial de justiça se encontra 
     E deve apresentar o botão Enviar localização habilitado

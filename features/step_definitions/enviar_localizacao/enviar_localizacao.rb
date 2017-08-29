@@ -22,8 +22,7 @@ Quando(/^o oficial de justiça pressionar o botão 'Enviar localização'$/) do
   
   # Aguarda tela carregar e vai para a aba Localização
   $action.waitElement("NameLabel")
-  Appium::TouchAction.new.press({x: 684, y: 570}).move_to({x: -560, y: -11}).release.perform
-
+  
   # Click botão Estou Aqui
   @localizacao_screen_object = $ENV::LocalizacaoScreenElement.new($driver)
   @localizacao_screen_object.clickEstouAqui
@@ -54,8 +53,7 @@ Quando(/^o oficial de justiça pressionar o botão 'Enviar localização' sem co
 
   # Aguarda tela carregar e vai para a aba Localização
   $action.waitElement("NameLabel")
-  Appium::TouchAction.new.press({x: 684, y: 570}).move_to({x: -560, y: -11}).release.perform
-
+  
   # Click botão Estou Aqui
   @localizacao_screen_object = $ENV::LocalizacaoScreenElement.new($driver)
   @localizacao_screen_object.clickEstouAqui
