@@ -20,7 +20,7 @@ end
 
 Quando(/^o oficial de justiça pressionar o botão 'Enviar localização'$/) do
   
-  # Aguarda tela carregar e vai para a aba Localização
+  # Aguarda tela carregar
   $action.waitElement("NameLabel")
   
   # Click botão Estou Aqui
