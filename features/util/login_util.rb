@@ -1,7 +1,7 @@
 class LoginActions
 
   def verificaSeTelaLogin
-    $action.waitElementByXpath("//android.view.ViewGroup[@content-desc=\"Usuário SAJ\"]/android.view.ViewGroup/android.widget.EditText")    
+    $action.waitElement("UserField")    
   end
 
   def preencheCamposLogin(login_screen_object)

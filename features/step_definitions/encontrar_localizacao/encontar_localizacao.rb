@@ -58,18 +58,6 @@ Quando(/^realizar o login na aplicação permitindo acesso à localização do d
   LoginActions.new.entrarPermitindoLocalizacao(@login_screen_object)
 end
 
-Quando(/^navegar até a aba de Localização$/) do
-  $action.waitElement("NameLabel")
-
-  Appium::TouchAction
-  .new
-  .press({x: 684, y: 570})
-  .move_to({x: -560, y: -11})
-  .release
-  .perform
-
-end
-
 Quando(/^o oficial de justiça pressionar o botão Estou aqui$/) do
   @localizacao_screen_object = $ENV::LocalizacaoScreenElement.new($driver)
   @localizacao_screen_object.clickEstouAqui
