@@ -1,5 +1,7 @@
 require './features/page/timeline_screen_page'
 module Android
+
+  # PO da página de timeline
   class TimelineScreenElement < TimelineScreenPage
     
     attr_reader :driver
@@ -7,11 +9,11 @@ module Android
     def initialize(driver)
       @driver = driver
 
-      data_checkin = @driver.id("TimelineItemDate")
-      numero_mandado = @driver.id("TimelineItemCod")
-      endereco = @driver.id("TimelineItemAddress")
-      hora = @driver.id("TimelineItemTime")
-      status_sinc = @driver.xpath("(//android.view.ViewGroup[@content-desc=\"TimelineItem\"])[1]/android.widget.ImageView")
+      data_checkin = @driver.id('TimelineItemDate')
+      numero_mandado = @driver.id('TimelineItemCod')
+      endereco = @driver.id('TimelineItemAddress')
+      hora = @driver.id('TimelineItemTime')
+      status_sinc = @driver.xpath('(//android.view.ViewGroup[@content-desc=\"TimelineItem\"])[1]/android.widget.ImageView')
       
       super(data_checkin, numero_mandado, endereco, hora, status_sinc)
     end

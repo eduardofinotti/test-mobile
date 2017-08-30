@@ -1,3 +1,4 @@
+# Passos da página de timeline do oficial de justiça
 class TimelineScreenPage
   
   attr_accessor :data_checkin, :numero_mandado, :endereco, :hora, :status_sinc

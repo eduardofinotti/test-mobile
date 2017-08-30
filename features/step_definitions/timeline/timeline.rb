@@ -64,7 +64,7 @@ Então(/^deve ser exibido a timeline com check\-ins agrupados por data$/) do
   data_checkin = Time.now
 
   if (@timeline_screen_page.get_data != data_checkin.strftime("%d/%m/%Y"))
-    fail("Erro! A data exibido é diferente da data do check-in!")
+    fail("Erro! A data exibida é diferente da data do check-in!")
   end  
 
 end
@@ -88,7 +88,7 @@ end
 Então(/^deve ser exibido a timeline com hora do check\-in$/) do
     
   if (@timeline_screen_page.get_hora != @hora_checkin.strftime("%H:%M"))
-    fail("Erro! A hora exibido é diferente da hora do check-in!")
+    fail("Erro! A hora exibida é diferente da hora do check-in!")
   end
 
 end
