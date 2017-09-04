@@ -21,13 +21,14 @@ end
 Quando(/^o oficial de justiça pressionar o botão 'Enviar localização'$/) do
   
   # Aguarda tela carregar
-  $action.waitElement("NameLabel")
+  $action.waitElement("FindLocationBtn")
   
   # Click botão Estou Aqui
   @localizacao_screen_object = $ENV::LocalizacaoScreenElement.new($driver)
   @localizacao_screen_object.clickEstouAqui
 
   # Verifica se encontrou endereço e clica em Enviar Localizaçao
+  $action.waitElement("ShowLocationSubtitle")
   @confirmar_local_screen_page = $ENV::ConfirmarLocalScreenElement.new($driver)
   
   if @confirmar_local_screen_page.getEndereco == nil 
@@ -59,14 +60,15 @@ Quando(/^o oficial de justiça pressionar o botão 'Enviar localização' sem co
   @localizacao_screen_object.clickEstouAqui
 
   # Verifica se encontrou endereço e clica em Enviar Localizaçao
+  $action.waitElement("ShowLocationSubtitle")
   @confirmar_local_screen_page = $ENV::ConfirmarLocalScreenElement.new($driver)
   
   if @confirmar_local_screen_page.getEndereco == nil 
     fail("Erro! Não pegou o endereço")
   end
 
-  if ($driver.get_network_connection) != 0
-    $driver.set_network_connection(0)
+  if ($driver.get_network_connection) != 1
+    $driver.set_network_connection(1)
   end
 
   @confirmar_local_screen_page = $ENV::ConfirmarLocalScreenElement.new($driver)

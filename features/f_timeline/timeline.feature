@@ -1,6 +1,6 @@
 #language: pt
 @timeline @funcionalidade_basica
-Funcionalidade: Enviar localização para o OJO-Web
+Funcionalidade: Exibiçao da timeline do Oficial de Justiça
   Como Oficial de Justiça, 
   Eu quero visualizar minha timeline de check-ins para saber se meus registros foram sincronizados com o servidor ou se está aguardando conexão com a internet.
 

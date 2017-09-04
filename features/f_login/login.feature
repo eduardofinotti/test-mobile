@@ -1,5 +1,5 @@
 #language: pt
-@login @funcionalidade_baisca
+@login @funcionalidade_basica
 Funcionalidade: Entrar na aplicação
   Como um oficial de justiça
   Eu quero poder acessar a aplicação
