@@ -13,7 +13,7 @@ module Android
       numero_mandado = @driver.id('TimelineItemCod')
       endereco = @driver.id('TimelineItemAddress')
       hora = @driver.id('TimelineItemTime')
-      status_sinc = @driver.xpath('(//android.view.ViewGroup[@content-desc=\"TimelineItem\"])[1]/android.widget.ImageView')
+      status_sinc = @driver.xpath("(//android.view.ViewGroup[@content-desc=\"TimelineItem\"])[1]/android.widget.ImageView")
       
       super(data_checkin, numero_mandado, endereco, hora, status_sinc)
     end

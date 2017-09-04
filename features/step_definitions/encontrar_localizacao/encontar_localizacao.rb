@@ -64,6 +64,9 @@ Quando(/^o oficial de justiça pressionar o botão Estou aqui$/) do
 end
 
 Então(/^deve ser apresentada a tela com o endereço onde Oficial de justiça se encontra$/) do
+  
+  $action.waitElement("ShowLocationSubtitle")
+  
   @confirmar_local_screen_page = $ENV::ConfirmarLocalScreenElement.new($driver)
 
   if @confirmar_local_screen_page.getEndereco == nil 

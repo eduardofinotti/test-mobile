@@ -16,7 +16,7 @@ Funcionalidade: Encontrar localização
   Cenário: Acessar aplicação sem permissão de acesso á localização
     Dado que o usuário logado tenha recusado a autorização de acesso a localização no login
     Então deve ser apresentada uma tela com a mensagem "Por favor, de permissão para posseguir." 
-  
+
   Cenário: Oficial de justiça realiza localização para enviar
     Dado GPS do dispositivo móvel está habilitado 
     Quando realizar o login na aplicação permitindo acesso à localização do dispositivo móvel
