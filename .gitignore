@@ -3,6 +3,7 @@ report.html.html
 report.html
 *.html
 *.DS_Store
+.DS_Store
 report
 .idea/
 screenshots/
