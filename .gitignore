@@ -1,6 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 report.html.html
 report.html
+*.html
+*.DS_Store
 report
 .idea/
 screenshots/
