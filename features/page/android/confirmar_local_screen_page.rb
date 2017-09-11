@@ -11,11 +11,7 @@ module Android
       
       endereco = @driver.id("ShowLocationSubtitle")
       botao_enviar_local = @driver.id("ShowLocationBtn")
-<<<<<<< features/page/android/confirmar_local_screen_page.rb
-       
-=======
-      
->>>>>>> features/page/android/confirmar_local_screen_page.rb
+
       super(endereco, botao_enviar_local)
     end
     
