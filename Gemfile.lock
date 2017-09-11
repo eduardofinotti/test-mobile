@@ -1,0 +1,77 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    appium_lib (9.5.0)
+      awesome_print (~> 1.7)
+      json (>= 1.8)
+      nokogiri (~> 1.6, >= 1.6.6)
+      selenium-webdriver (~> 3.4, >= 3.4.1)
+      tomlrb (~> 1.1)
+    awesome_print (1.8.0)
+    builder (3.2.3)
+    childprocess (0.7.1)
+      ffi (~> 1.0, >= 1.0.11)
+    cucumber (2.4.0)
+      builder (>= 2.1.2)
+      cucumber-core (~> 1.5.0)
+      cucumber-wire (~> 0.0.1)
+      diff-lcs (>= 1.1.3)
+      gherkin (~> 4.0)
+      multi_json (>= 1.7.5, < 2.0)
+      multi_test (>= 0.1.2)
+    cucumber-core (1.5.0)
+      gherkin (~> 4.0)
+    cucumber-wire (0.0.1)
+    diff-lcs (1.3)
+    ffi (1.9.18)
+    gherkin (4.1.3)
+    json (2.1.0)
+    mini_portile2 (2.2.0)
+    minitest (5.10.3)
+    minitest-hooks (1.4.1)
+    multi_json (1.12.1)
+    multi_test (0.1.2)
+    nokogiri (1.8.0)
+      mini_portile2 (~> 2.2.0)
+    power_assert (1.0.2)
+    rspec (3.6.0)
+      rspec-core (~> 3.6.0)
+      rspec-expectations (~> 3.6.0)
+      rspec-mocks (~> 3.6.0)
+    rspec-core (3.6.0)
+      rspec-support (~> 3.6.0)
+    rspec-expectations (3.6.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.6.0)
+    rspec-mocks (3.6.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.6.0)
+    rspec-support (3.6.0)
+    rubyzip (1.2.1)
+    selenium-webdriver (3.5.0)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.0)
+    test-unit (3.2.5)
+      power_assert
+    tomlrb (1.2.4)
+    yard (0.9.9)
+    yard-cucumber (3.1.0)
+      cucumber (~> 2)
+      gherkin (~> 4.0)
+      yard (~> 0.8, >= 0.8.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appium_lib
+  cucumber
+  minitest
+  minitest-hooks
+  rspec
+  rspec-expectations
+  test-unit
+  yard-cucumber
+
+BUNDLED WITH
+   1.15.3
