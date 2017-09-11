@@ -11,7 +11,7 @@ module Android
       
       endereco = @driver.id("ShowLocationSubtitle")
       botao_enviar_local = @driver.id("ShowLocationBtn")
-      
+       
       super(endereco, botao_enviar_local)
     end
     
