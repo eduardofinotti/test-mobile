@@ -1,4 +1,4 @@
-class HomeScreenPage
+class ConsultaScreenPage
   
   attr_accessor :botao_cadastro, :botao_consulta
   

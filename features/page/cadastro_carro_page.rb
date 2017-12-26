@@ -16,19 +16,19 @@ class CadastroCarroScreenPage
     @modelo_marca.send_key(modelo)
   end
 
-  def preecnhe_ano(ano)
+  def preenche_ano(ano)
     @ano.send_key(ano)
   end  
 
-  def preecnhe_placa(placa)
+  def preenche_placa(placa)
     @placa.send_key(placa)
   end 
 
-  def preecnhe_kilometragem(kilometragem)
+  def preenche_kilometragem(kilometragem)
     @kilometragem.send_key(kilometragem)
   end 
 
-  def preecnhe_valor(valor)
+  def preenche_valor(valor)
     @valor.send_key(valor)
   end 
 
