@@ -1,5 +1,5 @@
 require 'appium_lib'
-require 'cucumber/ast'
+require 'cucumber'
 require 'test/unit/assertions'
 
 def load_appium_configuration(platform, origin)
