@@ -7,6 +7,8 @@ Before do
     $action = Actions.new()
     $action.android_location_on
     p "Driver starting"
+
+    $cadastro_util = CadastroActions.new()
   end
 
 end

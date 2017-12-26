@@ -13,6 +13,7 @@ class CadastroCarroScreenPage
   end
 
   def preenche_modelo_marca(modelo)
+    @modelo_marca.clear
     @modelo_marca.send_key(modelo)
   end
 
