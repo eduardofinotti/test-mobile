@@ -7,10 +7,6 @@ class HomeScreenPage
     @botao_consulta = botao_consulta
   end
   
-  # def send_login_user(user)
-  #   @login_user.send_key(user)
-  # end
-  
   def click_botao_cadastro
     @botao_cadastro.click
   end  

@@ -6,9 +6,9 @@ module Android
     
     def initialize(driver)
       @driver = driver
-      
-      botao_cadastro = @driver.id("br.com.ftec.ailton.cadastrodecarrosweb:id/cadastrar")
-      botao_consulta = @driver.id("br.com.ftec.ailton.cadastrodecarrosweb:id/consulta")
+
+      botao_cadastro = @driver.id("cadastrar")
+      botao_consulta = @driver.id("consulta")
       
       super(botao_cadastro, botao_consulta)
     end
