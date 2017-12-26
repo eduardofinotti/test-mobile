@@ -1,18 +1,22 @@
-require './features/page/confirmar_local_screen_page'
+require './features/page/cadastro_carro_page'
 module Android
 
 # PO da página de confimar localização do oficial de justiça  
-  class ConfirmarLocalScreenElement < ConfirmarLocalScreenPage
+  class CadastroCarroScreenElement < CadastroCarroScreenPage
     
     attr_reader :driver
     
     def initialize(driver)
       @driver = driver
       
-      endereco = @driver.id("ShowLocationSubtitle")
-      botao_enviar_local = @driver.id("ShowLocationBtn")
+      modelo_marca = @driver.id("modelo")
+      ano = @driver.id("ano")
+      placa = @driver.id("placa")
+      kilometragem = @driver.id("km")
+      valor = @driver.id("valor")
+      botao_cadastrar = @driver.id("cadastrar")
 
-      super(endereco, botao_enviar_local)
+      super(modelo_marca, ano, placa, kilometragem, valor, botao_cadastrar)
     end
     
     def error_message

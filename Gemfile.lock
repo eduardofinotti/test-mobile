@@ -54,6 +54,10 @@ GEM
     test-unit (3.2.5)
       power_assert
     tomlrb (1.2.4)
+    watir (6.10.2)
+      selenium-webdriver (~> 3.4, >= 3.4.1)
+    watir-scroll (0.3.0)
+      watir (>= 6.0)
     yard (0.9.9)
     yard-cucumber (3.1.0)
       cucumber (~> 2)
@@ -71,7 +75,8 @@ DEPENDENCIES
   rspec
   rspec-expectations
   test-unit
+  watir-scroll
   yard-cucumber
 
 BUNDLED WITH
-   1.15.3
+   1.15.4

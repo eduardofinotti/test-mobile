@@ -5,7 +5,7 @@ Funcionalidade: Manter carros
 
   Cenário: Cadastrar carro
     Dado que estou na home da aplicação
-    E clico em 'cadastro'
+    E clico em cadastro
     E preencho todos os campos de cadastro de carro
-    Quando clo em 'cadastrar'
+    Quando clico em cadastrar
     Então o carro é salvo e é exibido na lista

@@ -1,6 +1,6 @@
-require './features/page/home_page'
+require './features/page/consulta_page'
 module Android
-  class HomeScreenElement < HomeScreenPage
+  class ConsultaScreenElement < ConsultaScreenPage
     
     attr_reader :driver
     
