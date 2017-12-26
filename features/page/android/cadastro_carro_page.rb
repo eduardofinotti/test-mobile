@@ -1,8 +1,8 @@
-require './features/page/confirmar_local_screen_page'
+require './features/page/cadastro_carro_page'
 module Android
 
 # PO da página de confimar localização do oficial de justiça  
-  class ConfirmarLocalScreenElement < ConfirmarLocalScreenPage
+  class CadastroCarroScreenElement < CadastroCarroScreenPage
     
     attr_reader :driver
     

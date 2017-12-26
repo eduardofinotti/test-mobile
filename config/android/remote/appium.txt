@@ -12,6 +12,6 @@ appPackage = ""
 appActivity = "b"
 appWaitActivity = ""
 [appium_lib]
-server_url = "http://luiz.lohn:893ecce6-1f2a-4efa-ab7d-e7703b606f1a@api.kobiton.com/wd/hub"
+server_url = ""
 wait = 20
 debug = "true"

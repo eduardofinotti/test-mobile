@@ -1,17 +1,16 @@
-require './features/page/login_screen_page'
+require './features/page/home_page'
 module Android
-  class LoginScreenElement < LoginScreenPage
+  class HomeScreenElement < HomeScreenPage
     
     attr_reader :driver
     
     def initialize(driver)
       @driver = driver
       
-      login_user = @driver.id("UserField")
-      login_password = @driver.id("PassField")
-      login_button = @driver.id("LoginBtn")
+      botao_cadastro = @driver.id("br.com.ftec.ailton.cadastrodecarrosweb:id/cadastrar")
+      botao_consulta = @driver.id("br.com.ftec.ailton.cadastrodecarrosweb:id/consulta")
       
-      super(login_user, login_password, login_button)
+      super(botao_cadastro, botao_consulta)
     end
     
     def error_message

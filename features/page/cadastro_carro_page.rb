@@ -1,5 +1,5 @@
 # passos da página de confirmar endereço do oficial de justiça
-class ConfirmarLocalScreenPage
+class CadastroCarroScreenPage
   
   attr_accessor :endereco, :botao_enviar_local
   
