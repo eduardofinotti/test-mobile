@@ -1,6 +1,6 @@
 #Mobile Interface Test
 
-Mobile interface test for Android and iOS version of OJO
+Projeto para teste da empresa Inmetrics
 
 ## Installation
 We need to install:
