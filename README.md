@@ -29,6 +29,11 @@ For run local tests, you need:
 
 Now your automated tests will be started and run in your device.
 
+#### Dependencias
+As dependencias do projeto estão no arquivo Gemfile.
+Para instalar as dependias basta executar na pasta do projeto: $bundle install
+
+Caso nao tenha o bundle, intalar antes: $sudo intall bundler
 
 ## Contributing
 1. Fork it!
