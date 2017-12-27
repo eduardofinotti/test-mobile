@@ -33,7 +33,7 @@ Now your automated tests will be started and run in your device.
 As dependencias do projeto estão no arquivo Gemfile.
 Para instalar as dependias basta executar na pasta do projeto: $bundle install
 
-Caso nao tenha o bundle, intalar antes: $sudo intall bundler
+Caso nao tenha o bundle, instalar antes: $sudo install bundler
 
 ## Contributing
 1. Fork it!
@@ -43,4 +43,7 @@ Caso nao tenha o bundle, intalar antes: $sudo intall bundler
 5. Submit a pull request :D
 
 ## To Execute
-cucumber PN=android OA=local -p run
+1 - git clone no projeto
+2 - executar $bundle install
+3 - conectar device no pc em modo desenvolvedor
+4 - run: $cucumber PN=android OA=local -p run
