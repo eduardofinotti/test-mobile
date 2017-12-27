@@ -43,7 +43,7 @@ Caso nao tenha o bundle, instalar antes: $sudo install bundler
 5. Submit a pull request :D
 
 ## To Execute
-1 - git clone no projeto
-2 - executar $bundle install
-3 - conectar device no pc em modo desenvolvedor
-4 - run: $cucumber PN=android OA=local -p run
+1. git clone no projeto
+2. executar $bundle install
+3. conectar device no pc em modo desenvolvedor
+4. run: $cucumber PN=android OA=local -p run
